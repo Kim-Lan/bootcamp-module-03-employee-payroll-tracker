@@ -13,4 +13,5 @@ Below is a screenshot of the employee payroll tracker showing sample information
 ## Deployment
 
 This application is deployed to GitHub Pages at:
+
 [https://kim-lan.github.io/bootcamp-module-03-employee-payroll-tracker/](https://kim-lan.github.io/bootcamp-module-03-employee-payroll-tracker/)

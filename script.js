@@ -18,7 +18,7 @@ const collectEmployees = function() {
     // Check salary input; default to 0 if not a number
     let salary = 0;
     if (!isNaN(salaryInput)) { // if salary is a number
-      salary = salaryInput;
+      salary = Number(salaryInput);
     }
 
     // Create employee object
@@ -41,7 +41,20 @@ const collectEmployees = function() {
 
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
-  // TODO: Calculate and display the average salary
+  // Define variable for total number of employees
+  const totalEmployees = employeesArray.length;
+
+  // Get sum of all salaries
+  let sumSalaries = 0;
+  for (const employee of employeesArray) {
+    sumSalaries += employee.salary;
+  }
+
+  // Calculate average salary
+  const averageSalary = sumSalaries / totalEmployees;
+
+  // Print to console
+  console.log(`The average employee salary between our ${totalEmployees} employee(s) is \$${averageSalary.toFixed(2)}`);
 }
 
 // Select a random employee

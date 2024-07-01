@@ -15,11 +15,13 @@ const collectEmployees = function() {
     let lastName = prompt('Enter last name:');
     let salaryInput = prompt('Enter salary:');
 
-    // Check salary input; default to 0 if not a number
-    let salary = 0;
-    if (!isNaN(salaryInput)) { // if salary is a number
-      salary = Number(salaryInput);
+    // Re-prompt for input if invalid number received for salary
+    while (isNaN(salaryInput)) {
+      salaryInput = prompt('Please enter a valid number for salary.');
     }
+
+    // Store salary as a number
+    let salary = Number(salaryInput);
 
     // Create employee object
     let newEmployee = {
